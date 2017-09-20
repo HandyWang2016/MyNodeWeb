@@ -7,4 +7,8 @@ router.get('/', function(req, res) {
    res.render('home');
 });
 
+router.post('/insertdatapost',function (req,res) {
+    var name=req.body.name;
+});
+
 module.exports = router;

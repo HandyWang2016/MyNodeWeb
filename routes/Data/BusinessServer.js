@@ -4,9 +4,12 @@
 * */
 
 var express=require("express");
+var router=express.Router();
 var dataService=require("DataService");
 var querystring=require("querystring");
 var http=require("http");
+
+
 
 var server= express.createServer(function (req, res) {
     if(req.url=="/dopost" && req.method.toLowerCase()=="post"){
