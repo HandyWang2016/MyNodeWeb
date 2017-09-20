@@ -8,12 +8,18 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var mongodemo=require('./routes/mongoDemo');
+var ejs=require('ejs');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//app.set('view engine', 'jade');
+
+//设置模板文件为html
+app.engine('.html',ejs.__express);
+app.set('view engine','html');
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

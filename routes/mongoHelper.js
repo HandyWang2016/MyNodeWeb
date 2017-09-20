@@ -1,6 +1,13 @@
 var mongoClient = require('mongodb').MongoClient;
 var DB_CON_STR = 'mongodb://localhost:27017/myMongoDB';
 
+/*数据连接*/
+exports.dbConnect = function (constr, callback) {
+    mongoClient.connect(constr, function (err, db) {
+        callback(err, db);
+    })
+};
+
 var insertData = function (db, callback) {
     var collection = db.collection('employer');
     var data = [{"name": "郭靖", "age": 21, "address": "中原", "phone": "13102912120"}];

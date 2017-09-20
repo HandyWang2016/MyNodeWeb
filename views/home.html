@@ -5,7 +5,10 @@
     <title>myPage</title>
 </head>
 <body>
-hello ,every body!
-<div><input type="button" id="btnOK" VALUE="确定"/></div>
+<form action="http://localhost:3000/dopost" method="post">
+    姓名：<input type="text" name="username"/>
+    年龄：<input type="number" name="age"/>
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
