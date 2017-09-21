@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>myPage</title>
-    <script src="../public/lib/jquery-2.1.4/jquery.js"></script>
+    <script src="/lib/jquery-2.1.4/jquery.js"></script>
     $(fun);
 </head>
 <body>
-<form action="http://localhost:3000/insertdatapost" method="post">
+<form action="http://localhost:3000/business/insertdata" method="post">
     姓名：<input type="text" name="username"/>
     年龄：<input type="number" name="age"/>
+    籍贯：<input type="text" name="nativePlace"/>
+    手机：<input type="text" name="phone"/>
     <input type="submit" value="提交">
 </form>
 </body>

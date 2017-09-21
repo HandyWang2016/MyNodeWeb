@@ -7,14 +7,14 @@ var fs = require("fs");
 var config = JSON.parse(fs.readFileSync("package.json", "utf8"));
 var constr = config.dbconnection.connectionstr;
 
-var addEmployer = function (name, phone, age, address, callback) {
+exports.addEmployer = function (username, age, nativePlace, phone,callback) {
     mongoHelper.dbConnect(constr, function (err, db) {
         db.collection("employer").insert(
             {
-                "name": name,
+                "username": username,
                 "age": age,
-                "phone": phone,
-                "address": address
+                "nativePlace": nativePlace,
+                "phone": phone
 
             }, function (err, result) {
                 if (err) {
